@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Webbooster</title>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+        <div class="header__column--one">
+          <a class="logo header__logo" href="#">
+            <svg
+              width="155"
+              height="28"
+              viewBox="0 0 155 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="155" height="28" fill="url(#pattern0)" />
+              <defs>
+                <pattern
+                  id="pattern0"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_2_2819"
+                    transform="translate(0 -0.00186421) scale(0.00549451 0.030416)"
+                  />
+                </pattern>
+                <image
+                  id="image0_2_2819"
+                  width="182"
+                  height="33"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="header__column--two">
+          <nav class="navigation header__navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Каталог</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Производители</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Для кого мы работаем</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Сертификаты</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">О нас</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">FAQ</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__column--three">
+          <a class="phone header__phone" href="tel:+78123135845"
+            >+7 (812) 313-58-45</a
+          >
+        </div>
+      </header>
+      <main class="main">
+        <h1 class="visually-hidden">Сайт компании Semitex.</h1>
+        <section class="main__callback-form">
+          <div class="main__content--one">
+            <h2 class="title main__title">
+              Оптовые поставки <br />
+              <span> электронных компонентов</span> <br />
+              ИЗ КИТАЯ день в день
+            </h2>
+            <p class="text main__text">
+              Комплексные поставки электронных компонентов и оборудования.
+              <br />
+              Подберем аналоги популярных брендов из Европы в условиях санкций.
+            </p>
+
+            <ul class="benefits main__benefits">
+              <li class="benefits__item">
+                Отсрочка платежей для постоянных клиентов
+              </li>
+              <li class="benefits__item">
+                Бесплатная доставка по Москве и СПБ в течение 2х часов
+              </li>
+              <li class="benefits__item">
+                Квалифицированный персональный менеджер
+              </li>
+            </ul>
+          </div>
+          <div class="main__content--two">
+            <div class="main__content--form-text">
+              <p class="text main__text--form">
+                Закажите <br />
+                обратный звонок
+              </p>
+            </div>
+
+            <form class="form main__form" action="#" method="post">
+              <label class="form__label" for="name">Ваше имя*</label>
+              <input
+                id="name"
+                class="form__input"
+                type="text"
+                placeholder="Петров Петр"
+                name="name"
+                required
+              />
+              <label class="form__label" for="phone">Ваш номер*</label>
+              <input
+                id="phone"
+                class="form__input"
+                type="text"
+                placeholder="+7 (_ _ _) _ _ _-_ _-_ _"
+                name="phone"
+                required
+              />
+              <button class="form__button button button--orange" type="submit">
+                Заказать звонок
+              </button>
+              <p class="text form__footnote">
+                Мы гарантируем конфиденциальность данных
+              </p>
+            </form>
+          </div>
+        </section>
+
+        <section class="main__advantages">
+          <h2 class="main__title--advantages title--big">
+            Почему с нами выгодно
+          </h2>
+          <p class="main__text--advantages text">
+            С 1996 года мы занимаемся оптовыми поставками электронных
+            компонентов от ведущих производителей из Европы <br />
+            и Азии для Российских потребителей.
+          </p>
+          <ul class="advantages-list main__advantages-list">
+            <li class="advantages-list__item">
+              <div class="advantages advantages--one">
+                <h3 class="advantages__title">Качественная продукция</h3>
+                <p class="advantages__subtitle text">
+                  Все наши товары сертифицированы и имеют сопроводительную
+                  документацию.
+                </p>
+              </div>
+            </li>
+            <li class="advantages-list__item">
+              <div class="advantages advantages--two">
+                <h3 class="advantages__title">Индивидуальный подход</h3>
+                <p class="advantages__subtitle text">
+                  Возможность изготовления компонентов специально для вас на
+                  заводах-изготовителя.
+                </p>
+              </div>
+            </li>
+            <li class="advantages-list__item">
+              <div class="advantages advantages--three">
+                <h3 class="advantages__title">Бесплатная доставка</h3>
+                <p class="advantages__subtitle text">
+                  При наличии товара на складе и заказе от 10 000 рублей,
+                  доставим бесплатно по Москве и СПБ в течение 2х часов.
+                </p>
+              </div>
+            </li>
+            <li class="advantages-list__item">
+              <div class="advantages advantages--four">
+                <h3 class="advantages__title">Подбираем аналоги</h3>
+                <p class="advantages__subtitle text">
+                  Поможем подобрать аналоги популярных европейских брендов в
+                  условиях санкций.
+                </p>
+              </div>
+            </li>
+            <li class="advantages-list__item">
+              <div class="advantages advantages--five">
+                <h3 class="advantages__title">Резервный запас компонентов</h3>
+                <p class="advantages__subtitle text">
+                  Хранение товара на наших складах для постоянных клиентов.
+                </p>
+              </div>
+            </li>
+            <li class="advantages-list__item">
+              <div class="advantages advantages--six">
+                <h3 class="advantages__title">Гибкая система оплаты</h3>
+                <p class="advantages__subtitle text">
+                  Отсрочка платежей для постоянных клиентов.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="main__makers">
+          <h2 class="main__title--makers title--big">Наши производители</h2>
+          <div class="main__makers-arrows">
+            <button class="button--arrow button" type="button"></button>
+            <button class="button--arrow-right button" type="button"></button>
+          </div>
+          <ul class="makers-list main__makers-list">
+            <li class="makers-list__item">
+              <div class="makers">
+                <a class="makers__link" href="#">
+                  <img src="icons/makers-1.svg" alt="Логотип компании." />
+                </a>
+              </div>
+            </li>
+            <li class="makers-list__item">
+              <div class="makers">
+                <a class="makers__link" href="#">
+                  <img src="icons/makers-2.svg" alt="Логотип компании." />
+                </a>
+              </div>
+            </li>
+            <li class="makers-list__item">
+              <div class="makers">
+                <a class="makers__link" href="#">
+                  <img src="icons/makers-3.svg" alt="Логотип компании." />
+                </a>
+              </div>
+            </li>
+            <li class="makers-list__item">
+              <div class="makers">
+                <a class="makers__link" href="#">
+                  <img src="icons/makers-4.svg" alt="Логотип компании." />
+                </a>
+              </div>
+            </li>
+            <li class="makers-list__item">
+              <div class="makers">
+                <a class="makers__link" href="#">
+                  <img src="icons/makers-5.svg" alt="Логотип компании." />
+                </a>
+              </div>
+            </li>
+          </ul>
+          <p class="main__text--makers text">
+            Lorem ipsum dolor sit amet consectetur. Non eget blandit in euismod
+            felis id quisque nunc. Non orci lacus elit mauris velit gravida
+            imperdiet id. Ipsum pulvinar ac ut sociis. Sed magna gravida
+            consequat et euismod aenean quis mauris. Ut etiam egestas ultrices
+            faucibus ultrices nisl enim consequat faucibus. Nibh id leo
+            ullamcorper eleifend. Id at commodo interdum et leo.
+          </p>
+        </section>
+        <section class="main__process">
+          <h2 class="main__title--process title--big">Схема работы</h2>
+          <p class="main__text--process text">
+            Lorem ipsum dolor sit amet consectetur. Augue velit in enim sagittis
+            imperdiet sit mauris. Vitae sit in fusce massa amet.
+          </p>
+          <ul class="process-list">
+            <li class="process-list__item">
+              <div class="process-card">
+                <span class="process-card__number">01</span>
+                <div
+                  class="process-card__container process-card__container--arrow"
+                >
+                  <h3 class="process-card__title title--medium">
+                    Вы оставляете заявку
+                  </h3>
+                  <p class="process-card__text text">
+                    Отправить запрос вы можете любым удобным для вас способом:
+                    например, через форму на сайте. Также вы можете связаться с
+                    нами напрямую.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="process-list__item">
+              <div class="process-card">
+                <span class="process-card__number">02</span>
+                <div
+                  class="process-card__container process-card__container--arrow process-card__container--arrow-inner"
+                >
+                  <h3 class="process-card__title title--medium">
+                    Мы проверяем наличие позиций
+                  </h3>
+                  <p class="process-card__text text">
+                    Проверяем наличие на складе, а также актуальность
+                    производства (возможна замена, если необходимо.) Если
+                    требуется замена - подбираем аналоги и привозим на заказ.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="process-list__item">
+              <div class="process-card">
+                <span class="process-card__number">03</span>
+                <div
+                  class="process-card__container process-card__container--arrow-inner process-card__container--arrow-bottom"
+                >
+                  <h3 class="process-card__title title--medium">
+                    Формируем коммерческое предложение
+                  </h3>
+                  <p class="process-card__text text">
+                    На данном этапе мы с вами согласуем ценовое предложение,
+                    обговариваем сроки поставки и условия оплаты.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="process-list__item process-list__item--four">
+              <div
+                class="process-card process-card__container--arrow-top-inner process-card__container--arrow-left"
+              >
+                <span class="process-card__number">04</span>
+                <div class="process-card__container">
+                  <h3 class="process-card__title title--medium">
+                    Проводим оплату
+                  </h3>
+                  <p class="process-card__text text">
+                    Далее, после получения авансового платежа, мы размещаем
+                    заказ.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="process-list__item process-list__item--five">
+              <div
+                class="process-card process-card__container--arrow-right-inner process-card__container--arrow-left"
+              >
+                <span class="process-card__number">05</span>
+                <div class="process-card__container">
+                  <h3 class="process-card__title title--medium">
+                    Мы выполняем заказ
+                  </h3>
+                  <p class="process-card__text text">
+                    Товар поступает на склад в Москву или Санкт-Петербург, где
+                    мы сверяем правильность поставки и начинаем сборку.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="process-list__item">
+              <div
+                class="process-card process-card__container--arrow-right-inner"
+              >
+                <span class="process-card__number">06</span>
+                <div class="process-card__container">
+                  <h3 class="process-card__title title--medium">
+                    Вы получаете товар
+                  </h3>
+                  <p class="process-card__text text">
+                    Поставляем вам товар в надлежащей упаковке в сопровождении
+                    оригиналов всех необходимых документов либо вы забираете его
+                    самовывозом.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="main__button--process button button--orange"
+            type="submit"
+          >
+            Оставить заявку
+          </button>
+        </section>
+
+        <section class="main__accordion">
+          <h2 class="main__title--accordion title--big">
+            Ответы на самые популярные вопросы в сфере
+          </h2>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion__item accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion__button accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion__collapse accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Like the phrase “stem cell” itself, “stem cell therapy” is
+                  often used to describe a variety of different medical
+                  therapies that utilize stem cells in some form to treat a
+                  patient. Sometimes the term is used incorrectly to refer to
+                  platelet rich plasma (PRP) injections. The term is also used
+                  to refer to stem cell transplants, also known as bone marrow
+                  transplants.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion__button accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion__collapse accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Like the phrase “stem cell” itself, “stem cell therapy” is
+                  often used to describe a variety of different medical
+                  therapies that utilize stem cells in some form to treat a
+                  patient. Sometimes the term is used incorrectly to refer to
+                  platelet rich plasma (PRP) injections. The term is also used
+                  to refer to stem cell transplants, also known as bone marrow
+                  transplants. Most commonly “stem cell therapy” is used to
+                  describe a procedure where the patient’s adult stem cells and
+                  other potentially regenerative cells are harvested from a
+                  tissue sample of either fat or bone marrow taken from the
+                  patient. These concentrated regenerative cells are then used
+                  to treat specific injuries typically by injecting them into
+                  the afflicted area. It should be said that this type of stem
+                  cell therapy is currently not FDA approved and clinics
+                  performing it illegally in the US or in other countries
+                  perform various versions of the procedure to treat illnesses
+                  and injuries with little to no clinical evidence.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion__button accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion__collapse accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Like the phrase “stem cell” itself, “stem cell therapy” is
+                  often used to describe a variety of different medical
+                  therapies that utilize stem cells in some form to treat a
+                  patient. Sometimes the term is used incorrectly to refer to
+                  platelet rich plasma (PRP) injections. The term is also used
+                  to refer to stem cell transplants, also known as bone marrow
+                  transplants.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion__button accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion__collapse accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Like the phrase “stem cell” itself, “stem cell therapy” is
+                  often used to describe a variety of different medical
+                  therapies that utilize stem cells in some form to treat a
+                  patient. Sometimes the term is used incorrectly to refer to
+                  platelet rich plasma (PRP) injections. The term is also used
+                  to refer to stem cell transplants, also known as bone marrow
+                  transplants.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Ultrices aliquam.
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion__collapse accordion-collapse collapse"
+                aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  Like the phrase “stem cell” itself, “stem cell therapy” is
+                  often used to describe a variety of different medical
+                  therapies that utilize stem cells in some form to treat a
+                  patient. Sometimes the term is used incorrectly to refer to
+                  platelet rich plasma (PRP) injections. The term is also used
+                  to refer to stem cell transplants, also known as bone marrow
+                  transplants.Like the phrase “stem cell” itself, “stem cell
+                  therapy” is often used to describe a variety of different
+                  medical therapies that utilize stem cells in some form to
+                  treat a patient. Sometimes the term is used incorrectly to
+                  refer to platelet rich plasma (PRP) injections. The term is
+                  also used to refer to stem cell transplants, also known as
+                  bone marrow transplants.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__column--one">
+          <a class="logo footer__logo" href="#">
+            <svg
+              width="155"
+              height="28"
+              viewBox="0 0 155 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="155" height="28" fill="url(#pattern0)" />
+              <defs>
+                <pattern
+                  id="pattern0"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_2_2819"
+                    transform="translate(0 -0.00186421) scale(0.00549451 0.030416)"
+                  />
+                </pattern>
+                <image
+                  id="image0_2_2819"
+                  width="182"
+                  height="33"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__column--two">
+          <nav class="navigation footer__navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Каталог</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Производители</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Для кого мы работаем</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Сертификаты</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">О нас</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__column--three">
+          <button class="button--purple button" type="button">
+            Оставить заявку
+          </button>
+        </div>
+      </footer>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
